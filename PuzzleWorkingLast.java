@@ -266,23 +266,23 @@ JPanel UnderPanel = new JPanel();
 		 NewOverPanel.add(TopMenuPanel);
 		 
 		 }
- 
+					
 					  public void TopMenuBar()
 					 {
-
 					 TopMenuPanel.setLayout(new GridLayout(1,1));
 					 TopMenuPanel.setSize(474,50);
 					 TopMenuPanel.setVisible(true);
 
 					 TopMenuPanel.add(TopMenuLabelMiddle);
 					 
-					 NewOverPanel.add(TopMenuPanel);
-					
+					 NewOverPanel.add(TopMenuPanel);					
 					 }
+					 
 
 	/**Randomiser Simulates 200 Clicks Upon The Tiles Of The Puzzle To Instigate Randomisation*/
 	 public void Randomiser()
 	 { 
+		 randomiserfinished = false;
 				 for(int clickcounter = 0; clickcounter<50; clickcounter++) //50 Iterations
 				 {
 				 Random rand = new Random(); //Random X & Y Array Co-Ordinates
@@ -294,7 +294,7 @@ JPanel UnderPanel = new JPanel();
 				 TileArray[robotrandomiserrow][robotrandomisercolumn].doClick(); //Simulates A Click Upon Random Tiles
 				 System.out.println("Robo Click " + clickcounter);
 				 }
-	 randomiserfinished = true;
+		randomiserfinished = true;
 	 }
 	 
 				public static void main(String [] args)
@@ -322,7 +322,7 @@ JPanel UnderPanel = new JPanel();
 													else if(e.getSource() == TopMenuButtonMiddle)
 													{
 													
-														//Programmable Button
+														Randomiser();
 													}
 							else
 							{
